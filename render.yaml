@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: n8n-server
+    env: docker
+    plan: free
+    region: singapore # Pilih yang dekat dengan Indonesia
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_NODEJS_TERMINATION_TIMEOUT
+        value: 3600
+      - key: N8N_ENCRYPTION_KEY
+        value: rahasia123 # Ganti dengan kata acak pilihanmu
